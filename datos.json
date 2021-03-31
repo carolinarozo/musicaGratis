@@ -1,55 +1,55 @@
 {
 	"canciones": [
 		{
-			"nombre": "vive",
+			"nombre": "Vive",
 			"ruta": "uno.mp3",
 			"reproducciones": 10,
 			"icono": 4
 		},
 		{
-			"nombre": "invierno",
+			"nombre": "Invierno",
 			"ruta": "dos.mp3",
 			"reproducciones": 30,
 			"icono": 1
 		},
 		{
-			"nombre": "planeta",
+			"nombre": "Planeta",
 			"ruta": "tres.mp3",
 			"reproducciones": 20,
 			"icono": 3
 		},
 		{
-			"nombre": "suave",
+			"nombre": "Suave",
 			"ruta": "cuatro.mp3",
 			"reproducciones": 80,
 			"icono": 2
 		},
 		{
-			"nombre": "contigo",
+			"nombre": "Contigo",
 			"ruta": "cinco.mp3",
 			"reproducciones": 50,
 			"icono": 4
 		},
 		{
-			"nombre": "alas",
+			"nombre": "Alas",
 			"ruta": "seis.mp3",
 			"reproducciones": 70,
 			"icono": 1
 		},
 		{
-			"nombre": "verde",
+			"nombre": "Verde",
 			"ruta": "siete.mp3",
 			"reproducciones": 60,
 			"icono": 3
 		},
 		{
-			"nombre": "nuevamente",
+			"nombre": "Nuevamente",
 			"ruta": "ocho.mp3",
 			"reproducciones": 90,
 			"icono": 1
 		},
 		{
-			"nombre": "hoy",
+			"nombre": "Hoy",
 			"ruta": "nueve.mp3",
 			"reproducciones": 40,
 			"icono": 2
