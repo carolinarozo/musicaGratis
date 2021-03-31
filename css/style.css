@@ -36,3 +36,7 @@ img {
 .index {
 	z-index: 2;
 }
+
+.error {
+	color: red;
+}

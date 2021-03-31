@@ -36,5 +36,39 @@ function tablaJson() {
     
     
 }
+function limpiarErrores(){
+  var errores = document.getElementsByClassName("error");
+  for(var i = 0; i < errores.length; i++){
+    errores[i].innerHTML = "";
+  }
+}
+function validar(formulario) {
 
+    limpiarErrores();
 
+    if (formulario.correo.value.trim().length == 0) {
+        document.getElementById("errorCorreo").innerText = "Campo obligatorio";
+        formulario.correo.focus();
+        return false;
+    }
+    var re = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+    if (!re.test(formulario.correo.value)) {
+        document.getElementById("errorCorreo").innerText = "Correo inválido";
+        formulario.correo.focus();
+        return false;
+    }
+
+    if (formulario.contrasena.value.trim().length == 0) {
+        document.getElementById("errorContrasena").innerText = "Campo obligatorio";
+        formulario.correo.focus();
+        return false;
+    }
+
+    if (formulario.contrasena.value.length < 8) {
+        document.getElementById("errorContrasena").innerText = "La contraseña debe tener más de 8 caracteres";
+        formulario.correo.focus();
+        return false;
+    }
+
+    return true;
+}

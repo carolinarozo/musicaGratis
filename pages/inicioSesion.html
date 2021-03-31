@@ -79,12 +79,15 @@
                     <form>
                         <h2>Inicio de sesión</h2>
                         <label for="correo">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="correo" name="email"
-                            placeholder="correo electrónico" required>
+                        <input type="email" class="form-control" id="correo" name="correo"
+                            placeholder="correo electrónico">
+                        <span id="errorCorreo" class="error"></span><br>
                         <label class="pt-1" for="password">Contraseña</label>
-                        <input type="password" id="contraseña" class="form-control" name="contraseña"
+                        <input type="password" id="contrasena" class="form-control" name="contrasena"
                             placeholder="contraseña">
-                        <button type="submit" class="btn btn-primary mt-3" value="continuar">Continuar</button>
+                        <span id="errorContrasena" class="error"></span><br>
+                        <button type="submit" class="btn btn-primary mt-3" value="continuar" id="inicioSesion"
+                            onclick="return validar(this.form)">Continuar</button>
 
                     </form>
                 </div>
