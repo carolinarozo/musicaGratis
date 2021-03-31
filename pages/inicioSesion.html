@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
     <header>
         <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar-brand d-flex" href="../pages/inicio.html">
@@ -79,11 +80,11 @@
                         <h2>Inicio de sesión</h2>
                         <label for="correo">Correo Electrónico</label>
                         <input type="email" class="form-control" id="correo" name="email"
-                            placeholder="correo electrónico">
+                            placeholder="correo electrónico" required>
                         <label class="pt-1" for="password">Contraseña</label>
                         <input type="password" id="contraseña" class="form-control" name="contraseña"
                             placeholder="contraseña">
-                        <input type="submit" value="Continuar" onclick="return validar(this.form)">
+                        <button type="submit" class="btn btn-primary mt-3" value="continuar">Continuar</button>
 
                     </form>
                 </div>
