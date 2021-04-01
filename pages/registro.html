@@ -77,15 +77,25 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6 my-5">
                     <form>
-                        <h2>Registro</h2>
+                        <h2 class="text-center">Registro</h2>
+
                         <label for="correo">Correo Electrónico*</label>
-                        <input type="email" class="form-control" id="correo" placeholder="correo electrónico">
-                        <label class="pt-3" for="password">Contraseña*</label>
-                        <input type="password" id="contraseña" class="form-control" placeholder="contraseña">
-                        <label class="pt-3" for="password">Confrimacion de Contraseña*</label>
-                        <input type="password" id="contraseña" class="form-control" placeholder="contraseña">
-                        <label class="pt-3" for="generoMusical">Género musical favorito*</label>
-                        <select class="form-control" id="opciones">
+                        <input type="email" class="form-control" id="correo" placeholder="correo electrónico"
+                            name="correo">
+                        <span id="errorCorreo" class="error"></span><br>
+
+                        <label for="password">Contraseña*</label>
+                        <input type="password" id="contrasena" class="form-control" placeholder="contraseña"
+                            name="contrasena">
+                        <span id="errorContrasena" class="error"></span><br>
+
+                        <label for="password">Confrimacion de Contraseña*</label>
+                        <input type="password" id="ConfContrasena" class="form-control" placeholder="contraseña"
+                            name="ConfContrasena">
+                        <span id="errorConfContrasena" class="error"></span><br>
+
+                        <label for="generoMusical">Género musical favorito*</label>
+                        <select class="form-control" id="opciones" name="opciones">
                             <option value="">Seleccione...</option>
                             <option value="Rock">Rock</option>
                             <option value="Pop">Pop</option>
@@ -100,7 +110,10 @@
 
 
                         </select>
-                        <p class="pt-3">Edad*</p>
+                        <span id="errorGenero" class="error"></span><br>
+
+                        <p>Edad*</p>
+                        <span id="errorEdad" class="error"></span>
                         <div class="form-check">
 
                             <input class="form-check-input" type="radio" name="edad" id="opcion1" value="menor a 20">
@@ -118,15 +131,17 @@
                         </div>
                         <div class="form-check pt-3">
 
-                            <input class="form-check-input" type="checkbox" id="terminos" value="">
-                            <label for="terminos" class="form-check-label"> Acepto términos de uso*</label>
+                            <input class="form-check-input" type="checkbox" id="terminos" value="" name="terminos">
+                            <label for="terminos" class="form-check-label"> Acepto términos de uso*</label><br>
+                            <span id="errorTerminos" class="error"></span>
                         </div>
 
                         <p class="pt-3 text-info"><strong>*Campos obligatorios</strong></p>
 
 
 
-                        <button type="submit" class="btn btn-primary mt-3" value="continuar">Continuar</button>
+                        <button type="submit" class="btn btn-primary mt-3" value="continuar"
+                            onclick="return validar(this.form)">Continuar</button>
 
                     </form>
                 </div>

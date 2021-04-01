@@ -69,6 +69,36 @@ function validar(formulario) {
         formulario.correo.focus();
         return false;
     }
+    if (formulario.ConfContrasena.value.trim().length == 0) {
+        document.getElementById("errorConfContrasena").innerText = "Campo obligatorio";
+        formulario.correo.focus();
+        return false;
+    }
+    if (formulario.ConfContrasena.value != formulario.contrasena.value) {
+        document.getElementById("errorConfContrasena").innerText = "La confirmación no coincide con la contraseña";
+        formulario.correo.focus();
+        return false;
+    }
+
+    if (formulario.opciones.value =="") {
+        document.getElementById("errorGenero").innerText = "Debe seleccionar un genero Músical";
+        formulario.correo.focus();
+        return false;
+    }
+    if (formulario.edad.value ==0) {
+        document.getElementById("errorEdad").innerText = "Debe seleccionar un rando de edad";
+        formulario.correo.focus();
+        return false;
+    }
+
+     if (!formulario.terminos.checked) {
+        document.getElementById("errorTerminos").innerText = "Debe aceptar los términos de uso";
+        formulario.correo.focus();
+        return false;
+    }
+
+
+    alert("Datos enviados.")    
 
     return true;
 }
