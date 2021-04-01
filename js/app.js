@@ -115,56 +115,39 @@ function buscar() {
 
             
 
+            let busqueda = document.getElementById("busqueda").value;
+            
+           
+            
+            
+            var regexp = new RegExp(busqueda, "i");
 
-            for (let item of datosCanciones) {
+            
 
-                let busqueda = document.getElementById("busqueda").value;
-
-                busqueda = busqueda.toUpperCase();               
+            
+            
+            
+            for (let item of datosCanciones) {         
                 
-                if (busqueda=="") {
-                    
+                console.log(regexp.test(item.nombre));
+
+                
+                if (regexp.test(item.nombre)) {
                     contenido.innerHTML += `
 
-                    
-                                    
-
-                    <div class="card col-12 col-md-6 col-lg-4 mx-0 px-0 bg-secondary">
+                    <div class="card col-12 col-md-6 col-lg-4 px-0  bg-secondary">
                         <div class="m-4 ">
 
-                            <img class="card-img-top" src="../images/icon_${item.icono}.svg" alt="Card image cap">
+                            <img class="card-img-top img-fluid" src="../images/icon_${item.icono}.svg" alt="Card image cap">
                         </div>
                         <div class="card-body bg-white px-0">
                             <h5 class="card-title text-center">${item.nombre}</h5>
-                            <div class="d-flex justify.content-center">
 
-                            <audio controls class="w-75 p-auto" src="../canciones/cinco.mp3"></audio>
+                            <div class="d-flex justify-content-center">
+
+                            <audio controls class="w-75" src="../canciones/cinco.mp3"></audio>
 
                             </div>
-
-                        </div>
-                    </div>
-
-                    
-                                    
-                                    
-                                    `
-                    
-
-                }
-
-                if (item.nombre.toUpperCase() == busqueda) {
-                    
-                                    contenido.innerHTML += `
-                                    <div class="card col-12 col-md-4 mx-0 px-0 bg-secondary">
-                        <div class="m-4 ">
-
-                            <img class="card-img-top" src="../images/icon_${item.icono}.svg" alt="Card image cap">
-                        </div>
-                        <div class="card-body bg-white px-0">
-                            <h5 class="card-title text-center">${item.nombre}</h5>
-
-                            <audio controls class="w-100" src="../canciones/cinco.mp3"></audio>
 
                         </div>
                     </div>
@@ -193,3 +176,5 @@ function buscar() {
 
 
 }
+
+

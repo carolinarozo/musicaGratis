@@ -41,3 +41,7 @@ img {
 	color: red;
 	font-size: 13px;
 }
+
+.alturamin {
+	min-height: 90vh;
+}
