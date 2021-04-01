@@ -1,6 +1,4 @@
 
-console.log("hola mundo");
-
 function tablaJson() {
    
     const xhttp = new XMLHttpRequest();
@@ -101,4 +99,98 @@ function validar(formulario) {
     alert("Datos enviados.")    
 
     return true;
+}
+
+
+
+
+function buscar() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", '../datos.json', true);
+    xhttp.send();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let datos = JSON.parse(this.responseText);
+            let datosCanciones = datos.canciones;
+            
+
+            let contenido = document.querySelector("#contenido");
+            contenido.innerHTML = '';
+
+            
+
+
+            for (let item of datosCanciones) {
+
+                let busqueda = document.getElementById("busqueda").value;
+
+                busqueda = busqueda.toUpperCase();               
+                
+                if (busqueda=="") {
+                    
+                    contenido.innerHTML += `
+
+                    
+                                    
+
+                    <div class="card col-12 col-md-4 mx-0 px-0 bg-secondary">
+                        <div class="m-4 ">
+
+                            <img class="card-img-top" src="../images/icon_${item.icono}.svg" alt="Card image cap">
+                        </div>
+                        <div class="card-body bg-white px-0">
+                            <h5 class="card-title text-center">${item.nombre}</h5>
+
+                            <audio controls class="w-100" src="../canciones/cinco.mp3"></audio>
+
+                        </div>
+                    </div>
+
+                    
+                                    
+                                    
+                                    `
+                    
+
+                }
+
+                if (item.nombre.toUpperCase() == busqueda) {
+                    
+                                    contenido.innerHTML += `
+                                    <div class="card col-12 col-md-4 mx-0 px-0 bg-secondary">
+                        <div class="m-4 ">
+
+                            <img class="card-img-top" src="../images/icon_${item.icono}.svg" alt="Card image cap">
+                        </div>
+                        <div class="card-body bg-white px-0">
+                            <h5 class="card-title text-center">${item.nombre}</h5>
+
+                            <audio controls class="w-100" src="../canciones/cinco.mp3"></audio>
+
+                        </div>
+                    </div>
+                                    
+                                    `
+                    
+
+                    
+                }
+                
+                
+                
+
+
+                
+
+                
+                
+            
+            }
+
+
+        }
+    }
+
+
+
 }
