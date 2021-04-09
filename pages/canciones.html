@@ -24,6 +24,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+                <!--Dos listas para crear espacios entre ellas-->
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item borde">
                         <a class="nav-link" href="../index.html">Inicio<span class="sr-only">(current)</span></a>
@@ -41,9 +42,11 @@
                         <a class="nav-link" href="../pages/registro.html">Registro</a>
                     </li>
                     <li class="nav-item">
+                        <!--boton que activa el modal-->
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contacto">
                             Contacto
                         </button>
+                        <!--Modal-->
                         <div class="modal fade" id="contacto" tabindex="-1" role="dialog"
                             aria-labelledby="contactoLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -77,14 +80,16 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-12 col-md-9 mx-auto pt-5">
+                <div class="col-12 mx-auto pt-5">
                     <h2>Canciones</h2>
                     <input type="text" name="busqueda" id="busqueda" class="form-control" placeholder="buscar..."
                         onkeydown="buscar()">
                 </div>
-                <div class="col-12 col-md-9 mx-auto p-0 my-4">
+                <div class="col-12  mx-auto p-0 my-4">
 
                     <div class="row col-12 mx-auto" id="contenido">
+
+                        <!--Espacio donde se contruye el contenido con JS con la funcion buscar()-->
 
                     </div>
 
